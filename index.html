@@ -68,7 +68,8 @@ const list = document.getElementById("list");
 const empty = document.getElementById("empty");
 function render(q) {
   q = (q || "").trim().toLowerCase();
-  const rows = ITEMS.filter(it => !q || String(it.no) === q || (it.name + " " + it.desc).toLowerCase().includes(q));
+  // 추가한 순서와 관계없이 번호가 큰 것부터 보여 준다 (2026-11-04)
+  const rows = ITEMS.filter(it => !q || String(it.no) === q || (it.name + " " + it.desc).toLowerCase().includes(q)).sort((a, b) => b.no - a.no);
   list.innerHTML = rows.map(it => `
     <li><a href="${it.url}" target="_blank" rel="noopener sponsored">
       <span class="thumb"><img src="${it.img}" alt="" loading="lazy"><span class="no">${it.no}</span></span>
