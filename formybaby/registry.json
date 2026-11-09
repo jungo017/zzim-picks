@@ -807,7 +807,10 @@
     "productNo": "3611054358",
     "img": "img/1.jpg",
     "createdAt": "2026-11-09T07:09:31.406Z",
-    "visibility": "published",
-    "postUrl": "https://www.instagram.com/formy.baby20/p/DfW3WurkqpY/"
+    "visibility": "draft",
+    "exclusionReason": "사용자 확인: 업로드 실패로 공개 목록 제외",
+    "rejectedPostUrls": [
+      "https://www.instagram.com/formy.baby20/p/DfW3WurkqpY/"
+    ]
   }
 ]
